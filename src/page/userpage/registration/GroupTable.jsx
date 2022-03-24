@@ -64,8 +64,7 @@ const headerCells = [
     { title: "Tuần học", disableSorting: true, name: "learningWeek" },
     { title: "Phòng học", disableSorting: true, name: "room" },
     { title: "Còn lại", disableSorting: true, name: "numberOfTeacher" },
-    { title: "Hành động", disableSorting: true },
-    { title: "DSSV", disableSorting: true, name: "listStudents" }//DSSV
+    { title: "Hành động", disableSorting: true }
 ]
 
 const searchData = [
