@@ -25,6 +25,6 @@ public class AccountServiceTest3 {
         request.setUsername("teacher6");
         request.setPassword("Sqa01!!!");
         AccountDTO account = service.findByUsername(request);
-        Assertions.assertNotNull(account);
+        Assertions.assertNull(account);
     }
 }
