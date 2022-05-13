@@ -12,7 +12,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.util.List;
 
 @SpringBootTest
-public class SubjectGroupServiceTest7 {
+public class SubjectGroupServiceTest6 {
     @Autowired
     private SubjectGroupService service;
 
