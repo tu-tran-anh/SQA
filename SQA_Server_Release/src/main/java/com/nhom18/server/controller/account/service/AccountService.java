@@ -7,8 +7,7 @@ import com.nhom18.server.exception.PasswordNotMatchException;
 import com.nhom18.server.exception.UsernameNotFoundException;
 
 public interface AccountService{
-	AccountDTO findByUsername(LoginRequest loginRequest)
-			throws UsernameNotFoundException,PasswordNotMatchException;
+	AccountDTO findByUsername(LoginRequest loginRequest);
 	void doForgot(ForgotRequest forgotRequest)
 			throws UsernameNotFoundException;
 }
