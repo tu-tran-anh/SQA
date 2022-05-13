@@ -16,7 +16,7 @@ public class SubjectGroupServiceTest7 {
     @Autowired
     private SubjectGroupService service;
 
-    // test tìm kiếm danh sách các nhóm học của môn học có id là 1, có ngày chứa xâu "Thứ b" theo thứ tự tăng dần mã nhóm
+    // test tìm kiếm danh sách các nhóm học của môn học có id là 2, có ngày chứa xâu "Thứ b" theo thứ tự tăng dần mã nhóm
     @Test
     public void testFindByTermSubject(){
         SubjectGroupRequest request = new SubjectGroupRequest();
