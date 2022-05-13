@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Locale;
 
 @SpringBootTest
-public class SubjectGroupServiceTest6 {
+public class SubjectGroupServiceTest5 {
     @Autowired
     private SubjectGroupService service;
 
