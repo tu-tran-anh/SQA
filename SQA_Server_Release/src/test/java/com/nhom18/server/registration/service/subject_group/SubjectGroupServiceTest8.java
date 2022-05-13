@@ -16,7 +16,7 @@ public class SubjectGroupServiceTest8 {
     @Autowired
     private SubjectGroupService service;
 
-    // test tìm kiếm danh sách các nhóm học của môn học có id là 1, có ngày là "Thứ b" theo thứ tự tăng dần mã nhóm
+    // test tìm kiếm danh sách các nhóm học của môn học có id là 1, có ngày chứa xâu "Thứ b" theo thứ tự tăng dần mã nhóm
     @Test
     public void testFindByTermSubject(){
         SubjectGroupRequest request = new SubjectGroupRequest();
@@ -30,7 +30,7 @@ public class SubjectGroupServiceTest8 {
 
         List<SubjectGroupDTO> ans =service.findByTermSubject(request);
         Assertions.assertEquals(1,ans.size()); // List có size = 1 thì pass
-        // kíp học tìm kiếm có ngày học chứa chuỗi "Thứ b"
+        // Ngày học chứa chuỗi "Thứ b"
         Assertions.assertTrue(ans.get(0).getLearningDay()
                 .toLowerCase().contains("Thứ b".toLowerCase()));
     }
