@@ -34,17 +34,17 @@ public class AccountServiceImpl implements AccountService{
 		this.passwordEncoder = new BCryptPasswordEncoder();
 	}
 
-	//Đăng nhập
 	@Override
 	@Transactional
-	public AccountDTO findByUsername(LoginRequest loginRequest)
-			throws UsernameNotFoundException, PasswordNotMatchException {
+	public AccountDTO findByUsername(LoginRequest loginRequest){
 		Account account = this.accountDAO.findByUsername(loginRequest.getUsername())
-				.orElseThrow(UsernameNotFoundException::new);
-		if(passwordEncoder.matches(loginRequest.getPassword(), account.getPassword())) {
+				.orElse(null);
+		if(account== null) return null;
+		if(passwordEncoder.matches(loginRequest.getPassword(), account.getPassword()))
+		{
 			return this.convertToDTO(account);
 		}
-		throw new PasswordNotMatchException();
+		return null;
 	}
 
 	//Chuyển về dạng dto
