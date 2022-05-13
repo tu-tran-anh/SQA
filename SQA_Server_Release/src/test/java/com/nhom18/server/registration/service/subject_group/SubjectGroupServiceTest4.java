@@ -11,7 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import java.util.List;
 
 @SpringBootTest
-public class SubjectGroupServiceTest5 {
+public class SubjectGroupServiceTest4 {
     @Autowired
     private SubjectGroupService service;
 // test tìm kiếm danh sách các nhóm học của môn học có id là 1, có mã nhóm là "K" theo thứ tự tăng dần mã nhóm
