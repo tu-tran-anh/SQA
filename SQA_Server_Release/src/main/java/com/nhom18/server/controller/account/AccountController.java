@@ -23,11 +23,11 @@ public class AccountController{
 	@Autowired
 	private AccountService accountService;
 
-	//Đăng nhập
 	@PostMapping(path = "/login")
 	public ResponseEntity<AccountDTO> findByUsername(@Valid @RequestBody LoginRequest loginRequest)
 			throws UsernameNotFoundException, PasswordNotMatchException{
 		AccountDTO ans = accountService.findByUsername(loginRequest);
+		if(ans == null) throw new UsernameNotFoundException();
 		return new ResponseEntity<>(ans, HttpStatus.OK);
 	}
 
